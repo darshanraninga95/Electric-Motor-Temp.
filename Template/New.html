@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        body {
+            background-color: skyblue;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0px;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        /* Control the left side */
+        .left {
+            left: 0;
+            background-color: rgb(157, 157, 157);
+        }
+
+        /* Control the right side */
+        .right {
+            right: 0;
+            background-color: rgb(157, 157, 157);
+        }
+
+        /* If you want the content centered horizontally and vertically */
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        /* Style the image inside the centered container, if needed */
+        .centered img {
+            width: 400px;
+            height: 300px;
+            border-radius: 30%;
+        }
+        .btn{
+            border: 2px solid white;
+            font-size: large;
+            color: black;
+            text-emphasis: none;
+            border-radius: 30px;
+            padding: 10px;
+            background-color: red;
+            text-decoration: none;
+            
+        }
+    </style>
+    <title>Electric Motor Temperature</title>
+</head>
+
+<body>
+
+    <div class="split left">
+        <div class="left" style="width: 70%;margin: 20px auto;  ">
+
+        </div>
+        <div class="centered">
+            <!-- image -->
+            <img
+                src="http://www.icym.edu.my/v13/images/electric_b3821.jpg">
+            
+        </div>
+    </div>
+
+    <div class="split right">
+        <div class="left" style="width: 70%;margin: 20px auto; background-color:rgb(157, 157, 157); ">
+
+        </div>
+        <div class="centered">
+            
+<h2>Motor Temperature Prediction</h2>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    
+<form method="POST">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Enter  ambient" name="ambient" required="required">
+                        </div><br>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Enter  coolant" name="coolant" required="required">
+                        </div><br>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Enter  torque" name="torque" required="required">
+                        </div><br>
+			<div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Enter  stator_yoke" name="stator_yoke" required="required">
+                        </div><br>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Enter  stator_tooth" name="stator_tooth" required="required">
+                        </div><br>
+			<div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Enter  stator_winding" name="stator_winding" required="required">
+                        </div><br>
+                        <div class="p-t-10">
+                            <button class="btn btn--pill btn--green" type="submit">Predict</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    
+
+</body>
+
+</html>
